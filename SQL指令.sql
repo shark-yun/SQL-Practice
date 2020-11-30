@@ -1,4 +1,5 @@
--- 創建資料表
+
+-- 創建資料表（加上 IF NOT EXISTS 判斷是否已經有資料表，若無才創建）
 CREATE TABLE IF NOT EXISTS stocks (
     id INT PRIMARY KEY NOT NULL,
     company_name TEXT NOT NULL,
@@ -7,7 +8,7 @@ CREATE TABLE IF NOT EXISTS stocks (
 
 -- 新增資料
 INSERT INTO stocks (id, company_name, price)
-VALUES (2330, '台積電', 220);
+VALUES (2330, '台積電', 450),(2112, '台達電', 100);
 
 -- 查詢資料
 SELECT *
